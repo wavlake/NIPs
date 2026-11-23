@@ -1,6 +1,8 @@
 # NIP-XX: Music Listening Status
 
-`draft` `optional`
+`withdrawn`
+
+> **Withdrawn.** This draft is superseded. It points at retired kinds 30440, 30441 and 30442. Current kinds: https://wavlake.com/nostr-kinds.json.
 
 This NIP extends NIP-38 (User Statuses) to support music listening status, enabling "now playing" features and social music discovery.
 

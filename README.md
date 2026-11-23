@@ -1,71 +1,37 @@
 # Wavlake NIPs
 
-Nostr Implementation Possibilities (NIPs) proposed by Wavlake for music streaming and creator economy on Nostr.
+> **These drafts are superseded. Current kinds: https://wavlake.com/nostr-kinds.json.**
+> All four drafts below are **withdrawn**. Do not build against kinds 30440–30443 or 9736. The agent guide at https://wavlake.com/llms.txt describes what Wavlake reads and writes today.
 
-## Overview
+Nostr Implementation Possibilities (NIPs) that Wavlake once proposed for music streaming on Nostr. They are kept for the record only.
 
-Wavlake is building a decentralized music streaming platform on Nostr. This repository contains our NIP proposals for:
+## Current kinds
 
-- **Music metadata** - Standard formats for tracks, albums, and artist profiles
-- **Streaming credits** - Cashu-based micropayments for content access
-- **Social features** - Music-specific social interactions
+| Kind | What it is |
+|---|---|
+| 36787 | track |
+| 34139 + `["t","album"]` | release |
+| 34139 without that tag | playlist |
+| 9444 | receipt |
 
-## Proposed NIPs
+Channels are plain [NIP-29](https://github.com/nostr-protocol/nips/blob/master/29.md) groups on Wavlake's relay. Kind 30445 is retiring. Kinds 30440–30443 are retired.
 
-| NIP | Title | Status | Event Kinds |
+The machine-readable list, generated from Wavlake's server constants, is https://wavlake.com/nostr-kinds.json.
+
+## Withdrawn drafts
+
+| Draft | Title | Status | Event kinds |
 |-----|-------|--------|-------------|
-| [NIP-XX](./nips/music-metadata.md) | Music Metadata Events | Draft | 30440, 30441, 30442, 30443 |
-| [NIP-XX](./nips/streaming-receipts.md) | Public Streaming Receipts | Draft | 9736 |
-| [NIP-XX](./nips/music-listening-status.md) | Music Listening Status | Draft | 30315 |
-| [NIP-XX](./nips/wavlake-credits.md) | Wavlake Streaming Credits | Draft | (uses NIP-60/61) |
-
-## Event Kind Registry
-
-### Music Metadata (30440-30449 range)
-
-| Kind | Name | Description |
-|------|------|-------------|
-| 30440 | Track Metadata | Addressable event for individual track information |
-| 30441 | Album Metadata | Addressable event for album collections |
-| 30442 | Artist Profile | Addressable event for artist/band profiles |
-| 30443 | Music Playlist | User-created playlists referencing tracks |
-
-### Streaming & Payments
-
-| Kind | Name | Description |
-|------|------|-------------|
-| 9736 | Stream Receipt | Public proof of content stream (anonymous) |
-
-### User Status
-
-| Kind | Name | Description |
-|------|------|-------------|
-| 30315 | User Status | Music listening status (extends NIP-38) |
-
-## Implementation Status
-
-These NIPs are currently implemented in:
-
-- **Wavlake Platform** - https://wavlake.com
-- **Wavlake Relay** - wss://relay.wavlake.com
-
-## Contributing
-
-We welcome feedback and contributions! Please:
-
-1. Open an issue for discussion
-2. Submit PRs for proposed changes
-3. Join our Discord for real-time discussion
+| [music-metadata](./nips/music-metadata.md) | Music Metadata Events | Withdrawn | 30440, 30441, 30442, 30443 (retired) |
+| [streaming-receipts](./nips/streaming-receipts.md) | Public Streaming Receipts | Withdrawn | 9736 (receipts are 9444) |
+| [music-listening-status](./nips/music-listening-status.md) | Music Listening Status | Withdrawn | 30315 |
+| [wavlake-credits](./nips/wavlake-credits.md) | Wavlake Streaming Credits | Withdrawn | (the Cashu credit model was dropped) |
 
 ## Related NIPs
 
-These proposals build on existing NIPs:
-
-- [NIP-01](https://github.com/nostr-protocol/nips/blob/master/01.md) - Basic protocol
-- [NIP-33](https://github.com/nostr-protocol/nips/blob/master/33.md) - Parameterized replaceable events
+- [NIP-01](https://github.com/nostr-protocol/nips/blob/master/01.md) - Basic protocol, including addressable events
+- [NIP-29](https://github.com/nostr-protocol/nips/blob/master/29.md) - Relay-based groups
 - [NIP-38](https://github.com/nostr-protocol/nips/blob/master/38.md) - User statuses
-- [NIP-60](https://github.com/nostr-protocol/nips/blob/master/60.md) - Cashu wallets
-- [NIP-61](https://github.com/nostr-protocol/nips/blob/master/61.md) - Nutzaps
 
 ## License
 

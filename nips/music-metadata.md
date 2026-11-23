@@ -1,6 +1,8 @@
 # NIP-XX: Music Metadata Events
 
-`draft` `optional`
+`withdrawn`
+
+> **Withdrawn.** This draft is superseded. Kinds 30440–30443 are retired. Wavlake music is kind 36787 (track) and kind 34139 (a release with `["t","album"]`, a playlist without it). Current kinds: https://wavlake.com/nostr-kinds.json.
 
 This NIP defines a set of addressable events for publishing music metadata on Nostr, enabling decentralized music streaming platforms and clients.
 
@@ -26,7 +28,7 @@ Existing music platforms are centralized, giving platforms control over artist c
 | 30442 | Artist Profile | Artist or band information |
 | 30443 | Playlist | User-created track collections |
 
-All kinds are **parameterized replaceable** (NIP-33), using a `d` tag as the unique identifier within each pubkey's namespace.
+All kinds are **addressable** (NIP-01), using a `d` tag as the unique identifier within each pubkey's namespace.
 
 ---
 

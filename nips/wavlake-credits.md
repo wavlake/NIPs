@@ -1,6 +1,8 @@
 # NIP-XX: Wavlake Streaming Credits (WLC)
 
-`draft` `optional`
+`withdrawn`
+
+> **Withdrawn.** This draft is superseded. Wavlake dropped the Cashu credit model. Credits are a US-dollar balance held by Wavlake, not a token. Current kinds: https://wavlake.com/nostr-kinds.json.
 
 This document specifies how Wavlake Streaming Credits integrate with NIP-60 (Cashu Wallets) and NIP-61 (Nutzaps) for content payments.
 

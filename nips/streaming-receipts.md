@@ -1,6 +1,8 @@
 # NIP-XX: Public Streaming Receipts
 
-`draft` `optional`
+`withdrawn`
+
+> **Withdrawn.** This draft is superseded. Do not use kind 9736. Wavlake's receipt is kind 9444, and its `a` tag names a 36787 track or a 34139 release. Current kinds: https://wavlake.com/nostr-kinds.json.
 
 This NIP defines an event kind for publicly attesting to content streams, enabling transparent royalty tracking and social proof of listening activity.
 
